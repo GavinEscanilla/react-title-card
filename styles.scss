@@ -1,19 +1,39 @@
-html,body{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
 }
 
-body{
+body {
+  display: flex;
+  background-color: aquamarine;
+  #root {
     display: flex;
-    background-color: aquamarine;
-    #root{
-        margin: 0;
-        padding: 0;
-        height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: pink;
+    text-align: center;
+    #container {
+      display: flex;
+      flex-direction: column;
+      #cards {
+        justify-content: center;
+        width: 300px;
+        border: 1px solid black;
         width: 100vw;
-        background-color: red;
-        text-align: center;
+        height: 100vh;
+        display: flex;
+        .card {
+          width: 500px;
+          margin: 10px;
+          height: 500px;
+        }
+      }
     }
+  }
 }

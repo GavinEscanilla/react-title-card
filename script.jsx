@@ -1,17 +1,21 @@
 const { useState } = React
 const  App = () => {
     return (
-        <div>
+        <div id="container">
             <h1>React title card</h1>
+            <div id="cards">
+            <TitleCard name="React" color="blue"/>
+            <TitleCard name="Angular" color="red"/>
+            <TitleCard name="vue" color="green"/>
+        </div>
         </div>
     )
 }
-const TitleCard = () => {
-    const [name,setname] = useState('')
-    const[color,setColor] = useState('')
+const TitleCard = ({name, color}) => {
+    
     return(  
-        <div id="}
-            <h1>React title card</h1>
+        <div id={name}  className="card" style={{backgroundColor:color}}>
+            <h1>{name}</h1>
         </div>
     )
 }
